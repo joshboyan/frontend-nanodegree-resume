@@ -61,7 +61,9 @@ h5 {
 
 }
 
-
+li {
+  list-style-type: none;
+}
 .date-text {
   font-style: italic;
   font-size: 14px;
@@ -132,6 +134,12 @@ a {
   background-color: #484848;
 }
 
+.skills {
+  width: 80%;
+  margin-left: 10%;
+  padding-bottom: 1rem;
+}
+
 .flex-box {
   display: -webkit-flex;
   display: flex;
@@ -171,6 +179,24 @@ span {
   padding: 5px;
 }
 
+.skillSet {
+  width: 25%;
+  float: left;
+  padding-left: 5%;
+}
+
+.skillSet li {
+  padding-left: 5%;
+}
+
+#education h2{
+  clear: both;
+}
+
+#workExperience {
+  width: 90%;
+  margin-left: 5%;
+}
 #lets-connect {
   text-align: center;
 }
@@ -180,6 +206,11 @@ span {
 @media only screen and (max-width: 1024px) {
   #lets-connect {
     margin-top: 5%;
+  }
+
+  .skills {
+    width: 100%;
+    margin-left: 0;
   }
 }
 
@@ -213,6 +244,9 @@ span {
   padding-bottom: 5%;
 }
 
+.gm-style-iw {
+  color: tomato;
+}
 @media only screen and (min-width: 750px) {
   #skills-h3,
   .biopic {

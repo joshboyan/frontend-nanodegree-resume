@@ -13,7 +13,7 @@ These are HTML strings. As part of the course, you'll be using JavaScript functi
 replace the %data% placeholder text you see in them.
 */
 var HTMLheaderName = '<h1 id="name">%data%</h1>';
-var HTMLheaderRole = '<span>%data%</span><hr>';
+var HTMLheaderRole = '<span class="white-text">%data%</span><hr>';
 
 var HTMLcontactGeneric = '<li class="flex-item"><span class="orange-text">%contact%</span><span class="white-text">%data%</span></li>';
 var HTMLmobile = '<li class="flex-item"><span class="orange-text">mobile</span><span class="white-text">%data%</span></li>';
@@ -27,7 +27,16 @@ var HTMLbioPic = '<img src="%data%" class="biopic">';
 var HTMLwelcomeMsg = '<span class="welcome-message">%data%</span>';
 
 var HTMLskillsStart = '<h3 id="skills-h3">Skills at a Glance:</h3><ul id="skills" class="flex-column"></ul>';
-var HTMLskills = '<li class="flex-item"><span class="white-text">%data%</span></li>';
+var HTMLskills = '<li class="flex-item skills"><span class="white-text">%data%</span></li>';
+
+var HTMLlanguagesStart = '<div class="skillSet"><h3 class="orange-text">Languages</h3><ul id="languages"></ul></div>';
+var HTMLlanguage = '<li><span class="white-text">%data%</span></li>';
+
+var HTMLlibrariesStart = '<div class="skillSet"><h3 class="orange-text">Libraries</h3><ul id="libraries"></ul></div>';
+var HTMLlibrary = '<li><span class="white-text">%data%</span></li>';
+
+var HTMLframeworksStart = '<div class="skillSet"><h3 class="orange-text">Frameworks</h3><ul id="frameworks"></ul></div>';
+var HTMLframework = '<li><span class="white-text">%data%</span></li>';
 
 var HTMLworkStart = '<div class="work-entry"></div>';
 var HTMLworkEmployer = '<a href="#">%data%';
@@ -127,14 +136,14 @@ function initializeMap() {
     var locations = [];
 
     // adds the single location property from bio to the locations array
-    locations.push(bio.contacts.location);
+    locations.push(bio.location);
 
     // iterates through school locations and appends each location to
     // the locations array. Note that forEach is used for array iteration
     // as described in the Udacity FEND Style Guide:
     // https://udacity.github.io/frontend-nanodegree-styleguide/javascript.html#for-in-loop
     education.schools.forEach(function(school){
-      locations.push(school.location);
+      locations.push(school.city);
     });
 
     // iterates through work locations and appends each location to
@@ -142,9 +151,14 @@ function initializeMap() {
     // as described in the Udacity FEND Style Guide:
     // https://udacity.github.io/frontend-nanodegree-styleguide/javascript.html#for-in-loop
     work.jobs.forEach(function(job){
-      locations.push(job.location);
+      locations.push(job.city);
     });
 
+    //iterates through lived in locations and appends each location to the locations array
+    livedIn.places.forEach(function(place) {
+      locations.push(place.city);
+    });
+    
     return locations;
   }
 
@@ -160,7 +174,7 @@ function initializeMap() {
     var lon = placeData.geometry.location.lng();  // longitude from the place service
     var name = placeData.formatted_address;   // name of the place from the place service
     var bounds = window.mapBounds;            // current boundaries of the map window
-
+    
     // marker is an object with additional data about the pin for a single location
     var marker = new google.maps.Marker({
       map: map,
@@ -177,7 +191,8 @@ function initializeMap() {
 
     // hmmmm, I wonder what this is about...
     google.maps.event.addListener(marker, 'click', function() {
-      // your code goes here!
+        infoWindow.open(map, marker);
+    
     });
 
     // this is where the pin actually gets added to the map.
@@ -204,7 +219,7 @@ function initializeMap() {
   and fires off Google place searches for each location
   */
   function pinPoster(locations) {
-
+    
     // creates a Google place search service object. PlacesService does the work of
     // actually searching for location data.
     var service = new google.maps.places.PlacesService(map);
@@ -239,11 +254,11 @@ Uncomment the code below when you're ready to implement a Google Map!
 */
 
 // Calls the initializeMap() function when the page loads
-//window.addEventListener('load', initializeMap);
+window.addEventListener('load', initializeMap);
 
 // Vanilla JS way to listen for resizing of the window
 // and adjust map bounds
-//window.addEventListener('resize', function(e) {
+window.addEventListener('resize', function(e) {
   //Make sure the map bounds get updated on page resize
-//  map.fitBounds(mapBounds);
-//});
+ map.fitBounds(mapBounds);
+});
