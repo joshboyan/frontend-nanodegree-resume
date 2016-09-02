@@ -119,7 +119,7 @@ var work = {
 	"employer": "Deschutes Brewery and Public House",
 	"years": "2014-2015",
 	"city": "Portland, OR",
-	"duties":["Leading and training Deschutes culinary team in high volume enviroment."]
+	"duties":["Leading and training Deschutes culinary team in high volume environment."]
 	},
 	{
 	"position": "Executive Chef",
@@ -238,7 +238,7 @@ var livedIn = {
   	{	"city": "Imperial Beach, CA"  	},
   	{	"city": "Gulf Shores, AL"  	},
   	{	"city": "Rock Island, IL"  	},
-  	{	"city": "Tempe, AZ"	}
+  	{	"city": "Tuscon, AZ"	}
   ]
 }
 
