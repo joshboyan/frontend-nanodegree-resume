@@ -234,12 +234,7 @@ education.display();
 var livedIn = {
 	"places": [
 	{	"city": "Manahawkin, NJ"	},
-	{	"city": "Tampa, FL"  	},
-  	{	"city": "Imperial Beach, CA"  	},
-  	{	"city": "Gulf Shores, AL"  	},
-  	{	"city": "Phoenix, AZ"	},
-  	{	"city": "Dallas, TX"	},
-  	{	"city": "Rock Island, IL"  	}
+	{	"city": "Tampa, FL"  	}
   	
   ]
 }
