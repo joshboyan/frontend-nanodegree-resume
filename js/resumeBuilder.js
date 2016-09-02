@@ -235,10 +235,7 @@ var livedIn = {
 	"places": [
 	
   	{	"city": "Imperial Beach, CA"  	},
-  	{	"city": "Gulf Shores, AL"  	},
-  	{	"city": "Phoenix, AZ"	},
-  	{	"city": "Dallas, TX"	},
-  	{	"city": "Rock Island, IL"  	},
+  	{	"city": "Tempe, AZ"	},
 	{	"city": "Manahawkin, NJ"	},
 	{	"city": "Tampa, FL"  	}
   	
