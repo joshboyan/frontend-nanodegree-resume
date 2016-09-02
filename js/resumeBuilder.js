@@ -233,11 +233,11 @@ education.display();
 //Object with additional places I've lived
 var livedIn = {
 	"places": [
-	{	"city": "Manahawking, NJ"	},
+	{	"city": "Manahawkin, NJ"	},
 	{	"city": "Tampa, FL"  	},
   	{	"city": "Imperial Beach, CA"  	},
   	{	"city": "Gulf Shores, AL"  	},
-  	{	"city": "Tucson, AZ"	},
+  	{	"city": "Phoenix, AZ"	},
   	{	"city": "Rock Island, IL"  	}
   	
   ]
