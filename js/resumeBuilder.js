@@ -112,21 +112,21 @@ var work = {
 	"employer": "JBoyan Designs",
 	"years": "2015-2017",
 	"city": "Portland, OR",
-	"duties":["being badass", "Keepin mofos in check", "holdin it down"]
+	"duties":["Creating custom web based business solutions for small business clients."]
 	},
 	{
 	"position": "Sous Chef",
 	"employer": "Deschutes Brewery and Public House",
 	"years": "2014-2015",
 	"city": "Portland, OR",
-	"duties":["being badass", "Keepin mofos in check", "holdin it down"]
+	"duties":["Leading and training Deschutes culinary team in high volume enviroment."]
 	},
 	{
 	"position": "Executive Chef",
 	"employer": "Titan Restaurant Group",
 	"years": "2012-2014",
 	"city": "Portland, OR",
-	"duties":["holdin it down", "being badass", "Keepin mofos in check"]
+	"duties":["Creating ordering and service systems while training junior team members."]
 	}
 	]
 };
@@ -237,7 +237,8 @@ var livedIn = {
 	{	"city": "Tampa, FL"  	},
   	{	"city": "Imperial Beach, CA"  	},
   	{	"city": "Gulf Shores, AL"  	},
-  	{	"city": "Rock Island, IL"  	}
+  	{	"city": "Rock Island, IL"  	},
+  	{	"city": "Tempe, AZ"	}
   ]
 }
 
