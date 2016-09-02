@@ -237,8 +237,9 @@ var livedIn = {
 	{	"city": "Tampa, FL"  	},
   	{	"city": "Imperial Beach, CA"  	},
   	{	"city": "Gulf Shores, AL"  	},
-  	{	"city": "Rock Island, IL"  	},
-  	{	"city": "Tuscon, AZ"	}
+  	{	"city": "Tucson, AZ"	},
+  	{	"city": "Rock Island, IL"  	}
+  	
   ]
 }
 
