@@ -238,6 +238,7 @@ var livedIn = {
   	{	"city": "Imperial Beach, CA"  	},
   	{	"city": "Gulf Shores, AL"  	},
   	{	"city": "Phoenix, AZ"	},
+  	{	"city": "Dallas, TX"	},
   	{	"city": "Rock Island, IL"  	}
   	
   ]
